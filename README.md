@@ -61,7 +61,7 @@ Example configuration for SQL Server:
 ```json
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Database=todo_db;User Id=your_user;Password=your_password;TrustServerCertificate=True;"
+    "DefaultConnection": "Server=localhost,1433;Database=todo_db;User Id=your_user;Password=your_password;TrustServerCertificate=True;"
   },
   "Logging": {
     "LogLevel": {
@@ -143,20 +143,20 @@ dotnet test
 
 ## 📬 API Endpoints
 
-| Method | Endpoint          | Description        |
-|--------|-------------------|--------------------|
-| GET    | /api/todos        | Get all todos      |
-| GET    | /api/todos/{id}   | Get todo by ID     |
-| POST   | /api/todos        | Create new todo    |
-| PUT    | /api/todos/{id}   | Update todo        |
-| DELETE | /api/todos/{id}   | Delete todo        |
+| Method | Endpoint         | Description        |
+|--------|------------------|--------------------|
+| GET    | /api/todo        | Get all todos      |
+| GET    | /api/todo/{id}   | Get todo by ID     |
+| POST   | /api/todo        | Create new todo    |
+| PUT    | /api/todo/{id}   | Update todo        |
+| DELETE | /api/todo/{id}   | Delete todo        |
 
 ## 🧪 Postman Testing
 
 You can test the API using [Postman](https://postman.com) by importing the following endpoints and sending requests to:
 
 ```
-http://localhost:5000/api/todos
+http://localhost:5019/api/todos
 ```
 
 Make sure the database is running and the correct connection string is configured.
