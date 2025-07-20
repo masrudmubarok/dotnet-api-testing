@@ -11,6 +11,7 @@ namespace TodoApi
 
             // Add services
             builder.Services.AddControllers();
+            builder.Services.AddScoped<TodoApi.Services.ITodoService, TodoApi.Services.TodoService>();
             builder.Services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
